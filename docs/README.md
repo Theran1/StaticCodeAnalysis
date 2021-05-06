@@ -31,12 +31,14 @@ There are several benefits of static code analysis tools — especially if you n
 
 The best static code analysis tools offer speed, depth, and accuracy. 
 
-Speed
+*Speed* 
+
 It takes time for developers to do manual code reviews. Automated tools are much faster.
 
 Static code checking addresses problems early on. And it pinpoints exactly where the error is in the code. So, you’ll be able to fix those errors faster. Plus, coding errors found earlier are less costly to fix.
 
-Depth
+*Depth* 
+
 Testing can’t cover every possible code execution path. But a static code analyzer can.
 
 It checks the code as you work on your build. You’ll get an in-depth analysis of where there might be potential problems in your code, based on the rules you’ve applied.
@@ -45,7 +47,8 @@ Here's an example of in-depth code analysis in Helix QAC, another tool for SCA, 
 
 //Imagen
 
-Accuracy
+*Accuracy* 
+
 Manual code reviews are prone to human error. Automated tools are not.
 
 They scan every line of code to identify potential problems. This helps you ensure the highest-quality code is in place — before testing begins. After all, when you’re complying with a coding standard, quality is critical.  
