@@ -77,5 +77,19 @@ The main reasons are as follows:
 - Negative side effects of static analysis (such as false positives) are usually "smoothed out" through means provided by the developers of powerful analyzers. These means include various mechanisms of warning suppression (individually, by pattern, and so on), switching off irrelevant diagnostics, and excluding files and folders from analysis. By properly tweaking the analyzer settings, you can reduce the amount of "noise" greatly. As my colleague Andrey Karpov has shown in the article about the check of EFL Core Libraries, tweaking the settings helps cut down the number of false positives to 10–15% at most.
 
 
+### Different SCA Tools:
+This is a Snippet of a huge list of SCA tools you can find in [this](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) 
+
+//Image
+
+For this research i choosed PVS-Studio, for the simple reason that there are examples of code that this Tool has found wittin videogame codes and i found some of the examples simple enough
 
 
+//everything about this page https://dzone.com/articles/static-analysis-in-video-game-development-top-10-s-1
+
+
+//then negative part of it
+
+
+
+For a more personal look into this topic from the point of view of an expert in this field, John Carmark, read [this](https://www.gamasutra.com/view/news/128836/InDepth_Static_Code_Analysis.php) post, is long but i personally recommend it 
