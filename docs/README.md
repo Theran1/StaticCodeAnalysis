@@ -1,1 +1,1 @@
-# StaticCodeAnalysis
+# Static Code Analysis
