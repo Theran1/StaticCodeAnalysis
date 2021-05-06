@@ -5,7 +5,7 @@ Static program analysis is the analysis of computer software that is performed w
 
 The term is usually applied to the analysis performed by an automated tool, with human analysis being called program understanding, program comprehension, or code review. Software inspections and software walkthroughs are also used in the latter case.
 
-## What About SCA Brother? Dynamic Code Analysis? Whats the difference?
+### What About SCA Brother? Dynamic Code Analysis? Whats the difference?
 
 //Imagen
 
