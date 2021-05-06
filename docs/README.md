@@ -63,3 +63,19 @@ Analyzers are designed for many different programming languages. So, it’s impo
 Standards
 One the primary uses of static analyzers is to comply with standards. So, if you’re in a regulated industry that requires a coding standard, you’ll want to make sure your tool supports that standard.
 
+### Cool but.. what about Videogame Development and SCA?
+
+Although video-game development includes a lot of steps, coding remains one of the basic ones. Even if you don’t write thousands of code lines, you have to use various tools whose quality determines how comfortable the process is and what the ultimate result will be. If you are a developer of such tools (such as game engines), this shouldn’t sound new to you.
+
+Why is static analysis useful in software development in general?
+
+The main reasons are as follows:
+
+- Bugs grow costlier and more difficult to fix over time. One of the principal advantages of static analysis is detecting bugs at early development stages (you can find an error when code writing). Therefore, by using static analysis, you could make the development process easier both for your coworkers and yourself, detecting and fixing lots of bugs before they become a headache.
+- Static analysis tools can recognize a great variety of bug patterns (copy-paste, typos, incorrect use of functions, etc.).
+- Static analysis is generally good at detecting those defects that defy dynamic analysis. However, the opposite is also true.
+- Negative side effects of static analysis (such as false positives) are usually "smoothed out" through means provided by the developers of powerful analyzers. These means include various mechanisms of warning suppression (individually, by pattern, and so on), switching off irrelevant diagnostics, and excluding files and folders from analysis. By properly tweaking the analyzer settings, you can reduce the amount of "noise" greatly. As my colleague Andrey Karpov has shown in the article about the check of EFL Core Libraries, tweaking the settings helps cut down the number of false positives to 10–15% at most.
+
+
+
+
