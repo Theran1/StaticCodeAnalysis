@@ -54,7 +54,6 @@ Manual code reviews are prone to human error. Automated tools are not.
 They scan every line of code to identify potential problems. This helps you ensure the highest-quality code is in place — before testing begins. After all, when you’re complying with a coding standard, quality is critical.  
 
 
-
 Here are a few things to consider when deciding which tool is right for you.
 
 Programming Language
@@ -76,6 +75,51 @@ The main reasons are as follows:
 - Static analysis is generally good at detecting those defects that defy dynamic analysis. However, the opposite is also true.
 - Negative side effects of static analysis (such as false positives) are usually "smoothed out" through means provided by the developers of powerful analyzers. These means include various mechanisms of warning suppression (individually, by pattern, and so on), switching off irrelevant diagnostics, and excluding files and folders from analysis. By properly tweaking the analyzer settings, you can reduce the amount of "noise" greatly. As my colleague Andrey Karpov has shown in the article about the check of EFL Core Libraries, tweaking the settings helps cut down the number of false positives to 10–15% at most.
 
+### Keep in mind
+
+Static code analysis is used for a specific purpose in a specific phase of development. But there are some limitations of a static code analysis tool.
+
+No Understanding of Developer Intent
+ 
+ 
+```
+int calculateArea(int length, int width)
+{
+    return (length + width);
+}
+```
+
+A static analysis tool may detect a possible overflow in this calculation. But it can’t determine that function fundamentally does not do what is expected!
+
+
+Use comments consistently and in a readable fashion.
+
+ 
+
+Possible Defects Lead to False Positives and False Negatives
+In some situations, a tool can only report that there is a possible defect.
+
+ 
+```
+int divide(void)
+{
+    int x;
+    if(foo())
+    {
+        x = 0;
+    }
+    else
+    {
+        x = 5;
+    }
+    return (10/x);
+}
+```
+ 
+
+If we know nothing about foo(), we do not know what value x will have.
+
+The result is undecidable. That means that tools may report defects that do not actually exist (false positives). Or they may fail to report real defects (false negatives). 
 
 ### Different SCA Tools:
 This is a Snippet of a huge list of SCA tools you can find in [this](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) 
