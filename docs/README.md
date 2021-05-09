@@ -193,7 +193,7 @@ If you compare it with the call above, you’ll notice that the last two argumen
 
 
 ### Conclusion
-
+We all know that is better if we, the coders, find teh errors ourselfs because we will know most of the time how to approach it and start itterating to fixing it, but when  it comes to looking through thousands of lines of codes, we are still humans, there is only so much we can see, errors can slip or we can also not notice that something is an error until proven wrong, so Static Code Analysis Tools are great ways of doing clean up in your code without sacrificing a teammates time, time that he could be espending programming or doign other features or important code, and instead, just a few clicks and you will be able to see your mistakes and even improve as a programmer.
 
 
 For a more personal look into this topic from the point of view of an expert in the videogame field, John Carmark, read [this](https://www.gamasutra.com/view/news/128836/InDepth_Static_Code_Analysis.php) post, is long but i personally recommend it 
