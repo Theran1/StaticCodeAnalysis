@@ -124,9 +124,9 @@ If we know nothing about foo(), we do not know what value x will have.
 The result is undecidable. That means that tools may report defects that do not actually exist (false positives). Or they may fail to report real defects (false negatives). 
 
 ### Different SCA Tools:
-This is a Snippet of a huge list of SCA tools you can find in [this](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) 
+This is a Snippet of a huge list of SCA tools you can find in [this](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis)m these are the tools that analize C/C++ lenguages.
 
-//Image
+![List](https://raw.githubusercontent.com/Theran1/StaticCodeAnalysis/main/docs/images/SCAC%2B%2BTools.jpg)
 
 ### Examples
 
