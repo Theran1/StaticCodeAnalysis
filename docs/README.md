@@ -82,14 +82,79 @@ This is a Snippet of a huge list of SCA tools you can find in [this](https://en.
 
 //Image
 
-For this research i choosed PVS-Studio, for the simple reason that there are examples of code that this Tool has found wittin videogame codes and i found some of the examples simple enough
+### Examples
+
+Finally to wrap it all up i will show 3 examples of how a SCA tool finds and warns about faulty code, for these example the tool chosen is PVS-Studio, because they have [this](https://dzone.com/articles/static-analysis-in-video-game-development-top-10-s-1) whole page of explanations and examples with a lot of detail about Static Code Analisys.
+
+1. S.T.A.L.K.E.R.: Clear Sky is the first example of SCA Tools pickign up on easy to miss/missunderstand lines of code
+
+```
+BOOL CActor::net_Spawn(CSE_Abstract* DC)
+{
+  ....
+  m_States.empty();
+  ....
+}
+```
+the warning given by the SCA Tool is as followed: 
+PVS-Studio warning: V530 The return value of function empty is required to be utilized.
+
+The problem is quite simple: the programmer is not using the logical value returned by the empty  method describing whether the container is empty or not. Since the expression contains nothing but a method call, I assume the programmer intended to clear the container but called the empty  method instead of clear  by mistake.
+
+You may argue that this bug is too plain, but that’s the nice thing about it- Even though it looks straightforward to someone not involved in writing this code, "plain" bugs like that still appear (and get caught) in various projects.
+
+This is a perfect example of why, even if its an obvious and quickly fixable misatke, is important that the SCA Tool Catches it for us, because: Who know between how many lines of code this little command is hidden?
+
+2. Analyzing the Quake III Arena GPL project
+
+This is one of those mistakes that the programmer most likelly made late at night or early in the morning, he checked if teh program worked, it did,a nd continued on without double checkign if what he wrote was right, another great example on why this 
+
+```
+void Terrain_AddMovePoint(....) 
+{  
+  ....  
+  x = ( v[ 0 ] - p->origin[ 0 ] ) / p->scale_x;
+  y = ( v[ 1 ] - p->origin[ 1 ] ) / p->scale_x;  
+  ....
+}
+```
+
+PVS-Studio warning: V537 Consider reviewing the correctness of ‘ scale_x ’ item’s usage.
+
+The variables x  and y  are assigned values, yet both expressions contain the  p->scale_x  subexpression, which doesn’t look right. The second subexpression should be  p->scale_y  instead.
 
 
-//everything about this page https://dzone.com/articles/static-analysis-in-video-game-development-top-10-s-1
+3. Analyzing Doom 3 code
+
+And to finish up big, even big companies can make small mistakes, take Doom 3 for example, where we find his nearly imperceptible mistake
+
+```
+void Sys_GetCurrentMemoryStatus( sysMemoryStats_t &stats ) 
+{  
+  ....
+  memset( &statex, sizeof( statex ), 0 );  
+  ....
+}
+```
+PVS-Studio warning: V575 The ‘ memset ’ function processes ‘0’ elements. Inspect the third argument.
+
+To figure this error out, we should recall the signature of the memset function:
+
+```
+void* memset(void* dest, int ch, size_t count);
+```
+If you compare it with the call above, you’ll notice that the last two arguments are swapped; as a result, some memory block that was meant to be cleared will stay unchanged.
 
 
-//then negative part of it
+### Conclusion
 
 
 
-For a more personal look into this topic from the point of view of an expert in this field, John Carmark, read [this](https://www.gamasutra.com/view/news/128836/InDepth_Static_Code_Analysis.php) post, is long but i personally recommend it 
+For a more personal look into this topic from the point of view of an expert in the videogame field, John Carmark, read [this](https://www.gamasutra.com/view/news/128836/InDepth_Static_Code_Analysis.php) post, is long but i personally recommend it 
+
+
+### Documentation
+
+
+
+
