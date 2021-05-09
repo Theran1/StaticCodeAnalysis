@@ -7,7 +7,9 @@ Ideally, such tools would automatically find security flaws with a high degree o
 
 ### What About SCA Brother? Dynamic Code Analysis? Whats the difference?
 
-//Imagen
+
+![SCAVSDCA](https://raw.githubusercontent.com/Theran1/StaticCodeAnalysis/main/docs/images/SCAVSDCA.jpg)
+
 
 When performing comprehensive source code reviews, both static and dynamic testing should be performed. Static analysis source code testing is adequate for understanding security issues within program code and can usually pick up about 85% of the flaws in the code.
 
@@ -22,8 +24,8 @@ This type of analysis addresses weaknesses in source code that might lead to vul
 
 SCA is commonly used to comply with coding guidelines — such as MISRA. And it’s often used for complying with industry standards — such as ISO 26262.
 
-//Imagen
-//Imagen
+![MISRA](https://raw.githubusercontent.com/Theran1/StaticCodeAnalysis/main/docs/images/MISRA.jpg)
+![ISO26262](https://raw.githubusercontent.com/Theran1/StaticCodeAnalysis/main/docs/images/ISO%2026262.jpg)
 
 ### Benefit
 
