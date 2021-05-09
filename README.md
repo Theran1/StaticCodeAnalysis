@@ -1,6 +1,5 @@
 # Static Code Analysis
 
-### Because Why Debug Yourself? 
 ### Introductory Guide to Static Code Analysis
 
 
