@@ -47,7 +47,7 @@ It checks the code as you work on your build. You’ll get an in-depth analysis 
 
 Here's an example of in-depth code analysis in Helix QAC, another tool for SCA, this one specifically for C/C++.
 
-//Imagen
+![Depth](https://raw.githubusercontent.com/Theran1/StaticCodeAnalysis/main/docs/images/depthexample.png)
 
 *Accuracy* 
 
