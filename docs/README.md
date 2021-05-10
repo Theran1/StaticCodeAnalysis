@@ -201,6 +201,16 @@ For a more personal look into this topic from the point of view of an expert in 
 
 ### Documentation
 
+https://owasp.org/www-community/controls/Static_Code_Analysis
 
+https://www.gamasutra.com/view/news/128836/InDepth_Static_Code_Analysis.php
+
+https://pitss.com/difference-dynamic-code-analysis-tools-static-code-analysis-tools/#:~:text=When%20performing%20comprehensive%20source%20code,the%20flaws%20in%20the%20code.
+
+https://sergvasiliev.medium.com/static-analysis-in-video-game-development-top-10-software-bugs-a32b1ed4c5c1
+
+https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+
+https://www.perforce.com/blog/sca/what-static-analysis
 
 
